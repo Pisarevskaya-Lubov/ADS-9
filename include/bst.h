@@ -17,6 +17,16 @@ class BST {
   }
 
  private:
+
+  struct Node {
+    Node() :count(0), left(nullptr), right(nullptr) {}
+    T value;
+    int count;
+    Node* left;
+    Node* right;
+  };
+  Node* root;
+
   Node* addNode(Node* root, const T& value) {
     if (root == nullptr) {
       root = new Node;
@@ -33,15 +43,6 @@ class BST {
     }
     return root;
   }
-  struct Node {
-    Node() :count(0), left(nullptr), right(nullptr) {}
-    T value;
-    int count;
-    Node* left;
-    Node* right;
-  };
-  Node* root;
-
   
   int getDepth(Node* root) {
     if (!root) {
