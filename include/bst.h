@@ -17,7 +17,6 @@ class BST {
   }
 
  private:
-
   struct Node {
     Node() :count(0), left(nullptr), right(nullptr) {}
     T value;
@@ -43,7 +42,6 @@ class BST {
     }
     return root;
   }
-  
   int getDepth(Node* root) {
     if (!root) {
       return 0;
@@ -68,7 +66,5 @@ class BST {
     }
     return 0;
   }
-
-
 };
 #endif  // INCLUDE_BST_H_
